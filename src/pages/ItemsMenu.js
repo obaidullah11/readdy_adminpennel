@@ -4,10 +4,8 @@ import DashboardLayout from '../components/DashboardLayout';
 const ItemsMenu = () => {
   const [activeTab, setActiveTab] = useState('items');
   const [isAddItemModalOpen, setIsAddItemModalOpen] = useState(false);
-  const [isEditItemModalOpen, setIsEditItemModalOpen] = useState(false);
   const [isAddCategoryModalOpen, setIsAddCategoryModalOpen] = useState(false);
   const [isAddAddonCategoryModalOpen, setIsAddAddonCategoryModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const [items] = useState([
     {
@@ -115,8 +113,7 @@ const ItemsMenu = () => {
   });
 
   const handleEditItem = (item) => {
-    setSelectedItem(item);
-    setIsEditItemModalOpen(true);
+    console.log('Editing item:', item);
   };
 
   const handleNewItemChange = (e) => {

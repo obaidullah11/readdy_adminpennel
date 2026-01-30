@@ -3,7 +3,6 @@ import DashboardLayout from '../components/DashboardLayout';
 
 const Reports = () => {
   const [activeTab, setActiveTab] = useState('store-performance');
-  const [dateRange, setDateRange] = useState('last-7-days');
 
   const reportCategories = [
     {

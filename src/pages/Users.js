@@ -3,8 +3,6 @@ import DashboardLayout from '../components/DashboardLayout';
 
 const Users = () => {
   const [activeTab, setActiveTab] = useState('all-users');
-  const [isViewModalOpen, setIsViewModalOpen] = useState(false);
-  const [selectedUser, setSelectedUser] = useState(null);
 
   const [allUsers] = useState([
     {
@@ -220,18 +218,11 @@ const Users = () => {
   ]);
 
   const handleViewUser = (user) => {
-    setSelectedUser(user);
-    setIsViewModalOpen(true);
+    console.log('Viewing user:', user);
   };
 
   const handleSuspendUser = (user) => {
     console.log('Suspending user:', user.name);
-  };
-
-  const handleDeleteUser = (user) => {
-    if (window.confirm(`Are you sure you want to delete ${user.name}?`)) {
-      console.log('Deleting user:', user.name);
-    }
   };
 
   return (
