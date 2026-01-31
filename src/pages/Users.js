@@ -5,7 +5,7 @@ const Users = () => {
   const [activeTab, setActiveTab] = useState('all-users');
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  const [allUsers, setAllUsers] = useState([
+  const [allUsers] = useState([
     {
       id: 1,
       name: 'John Smith',
